@@ -4,4 +4,4 @@
 4. Create API CURD User
 5. Create tool table user
 
-docker exec -it environment-laradock-workspace-1 bash
+docker exec -it --user laradock environment-laradock-workspace-1 bash
