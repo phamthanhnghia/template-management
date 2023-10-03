@@ -1,11 +1,35 @@
-1. SetUp Docker Enviroment Laravel
+
+## Setting Up a Docker Environment for Laravel
+
+To set up a Docker environment for Laravel, follow these steps:
+
+1. Clone the Laradock repository by running the following command:
+
+```
 git clone https://github.com/Laradock/laradock.git environment-laradock
-2. SetUp Laravel 10 
+```
+
+2. Install Laravel 10 by running the following command:
+
+```
 composer install
-3. Add template, table
+```
+
+3. Add the necessary templates and tables by running the following commands:
+
+```
 php artisan migrate
 php artisan db:seed
-4. Create API CURD User
-5. Create tool table user
+```
 
+4. Create an API for CRUD operations on the User model.
+
+5. Create a tool to manage the User table.
+
+To access the Docker workspace, run the following command:
+
+```
 docker exec -it --user laradock environment-laradock-workspace-1 bash
+```
+
+That's it! You now have a Docker environment set up for your Laravel project.
