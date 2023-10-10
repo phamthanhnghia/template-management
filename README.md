@@ -33,3 +33,7 @@ docker exec -it --user laradock environment-laradock-workspace-1 bash
 ```
 
 That's it! You now have a Docker environment set up for your Laravel project.
+
+```
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+```
