@@ -3,8 +3,8 @@ import { Button, TextField } from '@mui/material';
 import { login } from '../services/api';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('admin@admin.com');
+  const [password, setPassword] = useState('password');
 
   const handleLogin = async () => {
     try {

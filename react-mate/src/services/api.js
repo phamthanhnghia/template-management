@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Tạo một instance của Axios với các cài đặt mặc định
 const axiosInstance = axios.create({
-  baseURL: 'http://your-api-url.com', // Thay đổi thành URL của API thực tế
+  baseURL: 'http://localhost.laravel-source/api', // Thay đổi thành URL của API thực tế
 });
 
 // Hàm gọi API để đăng nhập
