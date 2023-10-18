@@ -1,21 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, TextField } from '@mui/material';
 import { login } from '../services/api';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginSuccess } from '../actions/actions';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState('admin@admin.com');
   const [password, setPassword] = useState('password');
-
+  const token = useSelector(state => state.auth.token);
+  const navigate = useNavigate();
   const handleLogin = async () => {
     try {
       const response = await login(email, password);
       const token = response.data.token;
       // Lưu token vào localStorage hoặc Redux store để sử dụng sau này
-      console.log(token);
+      
+      dispatch(loginSuccess(token));
+      navigate('/home');
     } catch (error) {
       console.error(error);
     }
   };
+
+
+
+  // useEffect(() => {
+  //   console.log(token);
+  // })
 
   return (
     <div>
