@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Button, TextField } from '@mui/material';
+import { Button, FormControl, TextField } from '@mui/material';
 import { login } from '../services/api';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginSuccess } from '../actions/actions';
@@ -24,14 +24,12 @@ const Login = () => {
     }
   };
 
-
-
   // useEffect(() => {
   //   console.log(token);
   // })
 
   return (
-    <div>
+    <FormControl>
       <TextField
         label="Email"
         value={email}
@@ -46,7 +44,7 @@ const Login = () => {
       <Button variant="contained" onClick={handleLogin}>
         Login
       </Button>
-    </div>
+    </FormControl>
   );
 };
 

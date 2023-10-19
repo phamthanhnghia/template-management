@@ -4,6 +4,8 @@ import { useSelector } from 'react-redux';
 import Login from '../components/Login';
 import UserList from '../components/UserList';
 import Home from '../pages/Home';
+import About from '../pages/About';
+import Contact from '../pages/Contact';
 
 
 const Router = createBrowserRouter([
@@ -34,6 +36,14 @@ const Router = createBrowserRouter([
     path: "/home",
     Component: Home,
   },
+  {
+    path: "/abount",
+    Component: About,
+  },
+  {
+    path: "/contact",
+    Component: Contact,
+  },
   // {
   //   path: "/logout",
   //   async action() {
@@ -46,22 +56,3 @@ const Router = createBrowserRouter([
 
 export default Router;
 
-// const Router = () => {
-//   const token = useSelector(state => state.auth.token);
-
-//   return (
-//     <Routes>
-//           {/* <Route path="/" index element={<Login />} />
-//           <Route path="/login"  element={<Login />} />
-//           {token ? (
-//             <Route path="/userlist" element={<UserList />} />
-//           ) : (
-//             <Navigate to="/login" />
-//           )} */}
-//           <Route path="/" element={token ? <UserList /> : <Navigate to="/login" />} />
-//           <Route path="/login"  element={<Login />} />
-//     </Routes>
-//   );
-// };
-
-// export default Router;
