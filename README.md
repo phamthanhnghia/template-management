@@ -42,5 +42,3 @@ http://localhost:8081/?server=mariadb&username=root&db=laravel&password=root
 ```
 
 https://github.com/remix-run/react-router/blob/dev/examples/auth-router-provider/src/App.tsx
-
-https://github.com/codedthemes/berry-free-react-admin-template
